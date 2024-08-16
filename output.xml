@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on darwin)" generated="2024-08-16T08:57:22.288111" rpa="false" schemaversion="5">
+<suite id="s1" name="Test1" source="/Users/harunbicakci/PycharmProjects/RobotFrameworkPython/UITesting/resources/test1.robot">
+<test id="s1-t1" name="LoginTest" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:57:22.395879" level="INFO">Opening browser 'chrome' to base url 'https://practicesoftwaretesting.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-16T08:57:22.395733" elapsed="2.719808"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-16T08:57:25.115951" elapsed="0.507857"/>
+</kw>
+<kw name="loginToApplication">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:57:25.624619" level="INFO">Clicking link 'xpath://a[@data-test='nav-sign-in']'.</msg>
+<arg>xpath://a[@data-test='nav-sign-in']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T08:57:25.624392" elapsed="0.037830"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-login/div/div/div/h3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-16T08:57:25.662332" elapsed="0.223946"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:57:25.886720" level="INFO">Typing text 'test9903@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T08:57:25.886466" elapsed="0.100217"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-16T08:57:28.988805" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-16T08:57:25.986804" elapsed="3.002357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:57:28.990822" level="INFO">Typing text 'CimBom!@2411' into text field 'xpath://input[@id='password']'.</msg>
+<arg>xpath://input[@id='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T08:57:28.989838" elapsed="0.074308"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:57:29.064390" level="INFO">Clicking button 'xpath:/html/body/app-root/div/app-login/div/div/div/form/div[3]/input'.</msg>
+<arg>xpath:/html/body/app-root/div/app-login/div/div/div/form/div[3]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T08:57:29.064269" elapsed="0.027595"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-16T08:57:32.094821" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-16T08:57:29.091975" elapsed="3.003215"/>
+</kw>
+<status status="PASS" start="2024-08-16T08:57:25.624149" elapsed="6.471562"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-16T08:57:32.097872" elapsed="0.082584"/>
+</kw>
+<status status="PASS" start="2024-08-16T08:57:22.395322" elapsed="9.785315"/>
+</test>
+<doc>My first robot test</doc>
+<status status="PASS" start="2024-08-16T08:57:22.288833" elapsed="9.892065"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

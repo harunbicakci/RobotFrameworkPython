@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on darwin)" generated="2024-08-16T08:51:15.932833" rpa="false" schemaversion="5">
+<suite id="s1" name="Test1" source="/Users/harunbicakci/PycharmProjects/RobotFrameworkPython/UITesting/resources/test1.robot">
+<test id="s1-t1" name="LoginTest" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:51:16.038937" level="INFO">Opening browser 'chrome' to base url 'https://practicesoftwaretesting.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-16T08:51:16.038811" elapsed="2.831647"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-16T08:51:18.870969" elapsed="0.386792"/>
+</kw>
+<kw name="loginToApplication">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:51:19.258593" level="INFO">Clicking link 'xpath://a[@data-test='nav-sign-in']'.</msg>
+<arg>xpath://a[@data-test='nav-sign-in']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T08:51:19.258351" elapsed="0.084016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-login/div/div/div/h3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-16T08:51:19.342475" elapsed="0.254078"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:51:19.596817" level="INFO">Typing text 'test9903@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T08:51:19.596674" elapsed="0.080844"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-16T08:51:19.677777" level="INFO">Typing text 'CimBom!@2411' into text field 'id:password'.</msg>
+<msg time="2024-08-16T08:51:20.224332" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-16T08:51:20.224485" level="FAIL">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+0   chromedriver                        0x0000000102d1d024 cxxbridge1$str$ptr + 1887276
+1   chromedriver                        0x0000000102d15700 cxxbridge1$str$ptr + 1856264
+2   chromedriver                        0x0000000102924694 cxxbridge1$string$len + 88116
+3   chromedriver                        0x000000010296081c cxxbridge1$string$len + 334268
+4   chromedriver                        0x000000010295ee38 cxxbridge1$string$len + 327640
+5   chromedriver                        0x00000001029a048c cxxbridge1$string$len + 595500
+6   chromedriver                        0x000000010295d474 cxxbridge1$string$len + 321044
+7   chromedriver                        0x000000010295e0e4 cxxbridge1$string$len + 324228
+8   chromedriver                        0x0000000102ce4a08 cxxbridge1$str$ptr + 1656336
+9   chromedriver                        0x0000000102ce9464 cxxbridge1$str$ptr + 1675372
+10  chromedriver                        0x0000000102cca8ec cxxbridge1$str$ptr + 1549556
+11  chromedriver                        0x0000000102ce9c14 cxxbridge1$str$ptr + 1677340
+12  chromedriver                        0x0000000102cbc5fc cxxbridge1$str$ptr + 1491460
+13  chromedriver                        0x0000000102d06a5c cxxbridge1$str$ptr + 1795684
+14  chromedriver                        0x0000000102d06bd8 cxxbridge1$str$ptr + 1796064
+15  chromedriver                        0x0000000102d15334 cxxbridge1$str$ptr + 1855292
+16  libsystem_pthread.dylib             0x0000000189ba5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189ba0d34 thread_start + 8
+</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-16T08:51:19.677642" elapsed="0.549963">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+0   chromedriver                        0x0000000102d1d024 cxxbridge1$str$ptr + 1887276
+1   chromedriver                        0x0000000102d15700 cxxbridge1$str$ptr + 1856264
+2   chromedriver                        0x0000000102924694 cxxbridge1$string$len + 88116
+3   chromedriver                        0x000000010296081c cxxbridge1$string$len + 334268
+4   chromedriver                        0x000000010295ee38 cxxbridge1$string$len + 327640
+5   chromedriver                        0x00000001029a048c cxxbridge1$string$len + 595500
+6   chromedriver                        0x000000010295d474 cxxbridge1$string$len + 321044
+7   chromedriver                        0x000000010295e0e4 cxxbridge1$string$len + 324228
+8   chromedriver                        0x0000000102ce4a08 cxxbridge1$str$ptr + 1656336
+9   chromedriver                        0x0000000102ce9464 cxxbridge1$str$ptr + 1675372
+10  chromedriver                        0x0000000102cca8ec cxxbridge1$str$ptr + 1549556
+11  chromedriver                        0x0000000102ce9c14 cxxbridge1$str$ptr + 1677340
+12  chromedriver                        0x0000000102cbc5fc cxxbridge1$str$ptr + 1491460
+13  chromedriver                        0x0000000102d06a5c cxxbridge1$str$ptr + 1795684
+14  chromedriver                        0x0000000102d06bd8 cxxbridge1$str$ptr + 1796064
+15  chromedriver                        0x0000000102d15334 cxxbridge1$str$ptr + 1855292
+16  libsystem_pthread.dylib             0x0000000189ba5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189ba0d34 thread_start + 8
+</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-login/div/div/div/form/div[3]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-16T08:51:20.227748" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2024-08-16T08:51:19.258131" elapsed="0.969743">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+0   chromedriver                        0x0000000102d1d024 cxxbridge1$str$ptr + 1887276
+1   chromedriver                        0x0000000102d15700 cxxbridge1$str$ptr + 1856264
+2   chromedriver                        0x0000000102924694 cxxbridge1$string$len + 88116
+3   chromedriver                        0x000000010296081c cxxbridge1$string$len + 334268
+4   chromedriver                        0x000000010295ee38 cxxbridge1$string$len + 327640
+5   chromedriver                        0x00000001029a048c cxxbridge1$string$len + 595500
+6   chromedriver                        0x000000010295d474 cxxbridge1$string$len + 321044
+7   chromedriver                        0x000000010295e0e4 cxxbridge1$string$len + 324228
+8   chromedriver                        0x0000000102ce4a08 cxxbridge1$str$ptr + 1656336
+9   chromedriver                        0x0000000102ce9464 cxxbridge1$str$ptr + 1675372
+10  chromedriver                        0x0000000102cca8ec cxxbridge1$str$ptr + 1549556
+11  chromedriver                        0x0000000102ce9c14 cxxbridge1$str$ptr + 1677340
+12  chromedriver                        0x0000000102cbc5fc cxxbridge1$str$ptr + 1491460
+13  chromedriver                        0x0000000102d06a5c cxxbridge1$str$ptr + 1795684
+14  chromedriver                        0x0000000102d06bd8 cxxbridge1$str$ptr + 1796064
+15  chromedriver                        0x0000000102d15334 cxxbridge1$str$ptr + 1855292
+16  libsystem_pthread.dylib             0x0000000189ba5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189ba0d34 thread_start + 8
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-08-16T08:51:20.227972" elapsed="0.000013"/>
+</kw>
+<status status="FAIL" start="2024-08-16T08:51:16.038412" elapsed="4.189755">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+0   chromedriver                        0x0000000102d1d024 cxxbridge1$str$ptr + 1887276
+1   chromedriver                        0x0000000102d15700 cxxbridge1$str$ptr + 1856264
+2   chromedriver                        0x0000000102924694 cxxbridge1$string$len + 88116
+3   chromedriver                        0x000000010296081c cxxbridge1$string$len + 334268
+4   chromedriver                        0x000000010295ee38 cxxbridge1$string$len + 327640
+5   chromedriver                        0x00000001029a048c cxxbridge1$string$len + 595500
+6   chromedriver                        0x000000010295d474 cxxbridge1$string$len + 321044
+7   chromedriver                        0x000000010295e0e4 cxxbridge1$string$len + 324228
+8   chromedriver                        0x0000000102ce4a08 cxxbridge1$str$ptr + 1656336
+9   chromedriver                        0x0000000102ce9464 cxxbridge1$str$ptr + 1675372
+10  chromedriver                        0x0000000102cca8ec cxxbridge1$str$ptr + 1549556
+11  chromedriver                        0x0000000102ce9c14 cxxbridge1$str$ptr + 1677340
+12  chromedriver                        0x0000000102cbc5fc cxxbridge1$str$ptr + 1491460
+13  chromedriver                        0x0000000102d06a5c cxxbridge1$str$ptr + 1795684
+14  chromedriver                        0x0000000102d06bd8 cxxbridge1$str$ptr + 1796064
+15  chromedriver                        0x0000000102d15334 cxxbridge1$str$ptr + 1855292
+16  libsystem_pthread.dylib             0x0000000189ba5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189ba0d34 thread_start + 8
+</status>
+</test>
+<doc>My first robot test</doc>
+<status status="FAIL" start="2024-08-16T08:51:15.934040" elapsed="4.294473"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

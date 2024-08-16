@@ -7,7 +7,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 my first robot test case
-    log to console    harun
+
     open browser    https:\\www.google.com    Chrome
 
 

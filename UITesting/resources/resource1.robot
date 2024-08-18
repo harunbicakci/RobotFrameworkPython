@@ -35,7 +35,7 @@ ${city}     Miami
 ${state}    Florida
 ${countryValue}      US
 ${phoneNo}      4079879922
-${emailAddress}     davidbackham9788@gmail.com
+${emailAddress}     davidbackham9789@gmail.com
 ${password}         United@123?
 ${myAccount}    My account
 
@@ -92,4 +92,5 @@ user login with valid credentials
 
 validate user logged in
     page should contain    ${myAccount}
+    log to console    User login successful!
     sleep    3s

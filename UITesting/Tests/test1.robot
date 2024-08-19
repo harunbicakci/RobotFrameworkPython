@@ -1,10 +1,10 @@
 *** Settings ***
-Resource    resources/resource1.robot
+Resource    resources/utils.robot
 Library    SeleniumLibrary
 Library    DebugLibrary
 
-Test Setup    resource1.create session
-Test Teardown   resource1.close session
+Test Setup    utils.create session
+Test Teardown   utils.close session
 
 *** Variables ***
 

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    resources/utils.robot
+Resource    /loginPageApp.robot
 Library    SeleniumLibrary
 Library    DebugLibrary
 
@@ -10,7 +10,7 @@ Test Teardown   utils.close session
 
 *** Test Cases ***
 LoginTest
-    loginToApplication
+    loginPageApp.loginToApplication
     title should be    Login - Practice Software Testing - Toolshop - v5.0
     sleep   1s
 

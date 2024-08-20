@@ -1,5 +1,7 @@
 *** Settings ***
-Resource    resources/utils.robot
+Resource    ../Resources/loginPageApp.robot
+Resource    ../Resources/homePageApp.robot
+Resource    ../Resources/registrationPageApp.robot
 Library    SeleniumLibrary
 Library    DebugLibrary
 
@@ -10,14 +12,12 @@ Test Teardown   utils.close session
 
 *** Test Cases ***
 create new user
-
-    utils.click sign-in button
-    utils.wait until login page loads
-    utils.click on register your account link
-    utils.enter the user informations
-    utils.wait until login page loads
-    utils.user login with valid credentials
+    homePageApp.click sign-in button
+    loginPageApp.wait until login page loads
+    loginPageApp.click on register your account link
+    registrationPageApp.enter the user informations
+    loginPageApp.wait until login page loads
+    loginPageApp.user login with valid credentials
     utils.validate user logged in
-
 
 *** Keywords ***

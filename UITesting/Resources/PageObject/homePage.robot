@@ -1,5 +1,6 @@
 *** Settings ***
-Resource    /utils.robot
+Resource    ../utils.robot
 Library    SeleniumLibrary
 
-*** Keywords ***
+*** Variables ***
+${signIn}      xpath=//*[@id="navbarSupportedContent"]/ul/li[4]/a

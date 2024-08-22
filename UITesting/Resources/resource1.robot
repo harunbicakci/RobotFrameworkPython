@@ -5,7 +5,5 @@ Library     DebugLibrary
 *** Variables ***
 ${myAccount}    My account
 
-
-${username}     test9905@gmail.com
-${password}     CimBom!@2411
-
+${emailAddress}     davidbackham9114@gmail.com
+${password}         United@123?

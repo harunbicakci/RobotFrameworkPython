@@ -26,5 +26,3 @@ ${city}     Miami
 ${state}    Florida
 ${countryValue}      US
 ${phoneNo}      4079879922
-${emailAddress}     davidbackham9789@gmail.com
-${password}         United@123?

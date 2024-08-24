@@ -10,6 +10,7 @@ ${url}  https://practicesoftwaretesting.com/
 create session
     open browser    ${url}            ${browser}
     maximize browser window
+    wait until element is visible    ${firstProductimage}
 
 close session
     close browser

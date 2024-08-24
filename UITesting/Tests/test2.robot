@@ -12,6 +12,7 @@ Test Teardown   utils.close session
 
 *** Test Cases ***
 create new user
+    [Tags]    smoke
     homePageApp.click sign-in button
     loginPageApp.wait until login page loads
     loginPageApp.click on register your account link

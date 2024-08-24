@@ -17,11 +17,47 @@ user login with valid credentials
     sleep    2s
 
 loginToApplication
-    click link      loginPage.${sign-in}
-    wait until element is visible    xpath:/html/body/app-root/div/app-login/div/div/div/h3
-    input text    id:email      ${emailAddress}
-    input text    xpath://input[@id='password']    ${password}
-    click button    xpath:/html/body/app-root/div/app-login/div/div/div/form/div[3]/input
+    click link      ${sign-in}
+    wait until element is visible    ${loginPageHeader}
+    input text    ${emailAddressField}      ${emailAddress}
+    input text    ${passwordField}    ${password}
+    click button   ${loginpageLoginButton}
     wait until element is visible    xpath://div[@class='help-block']
     get text    xpath://div[@class='help-block']
     page should contain    ${invalidEmailOrPasswordErrorExpectedText}
+
+invalidLoginEmptyEmail
+     click link      ${sign-in}
+     wait until element is visible    ${loginPageHeader}
+     input text    ${emailAddressField}      ${emailEmpty}
+     input text    ${passwordField}    ${password}
+     click button   ${loginpageLoginButton}
+     wait until element is visible    ${errorEmailIsRequired}
+     page should contain    ${expectedTextEmailIsRequired}
+
+invalidLoginInvalidEmailFormat
+     click link      ${sign-in}
+     wait until element is visible    ${loginPageHeader}
+     input text    ${emailAddressField}      ${emailInvalidFormat}
+     input text    ${passwordField}    ${password}
+     click button   ${loginpageLoginButton}
+     wait until element is visible    ${errorEmailFormatIsInvalid}
+     page should contain    ${expectedTextEmailFormatIsInvalid}
+
+invalidLoginEmptyPassword
+     click link      ${sign-in}
+     wait until element is visible    ${loginPageHeader}
+     input text    ${emailAddressField}     ${emailaddress}
+     input text    ${passwordField}    ${passwordEmpty}
+     click button   ${loginpageLoginButton}
+     wait until element is visible    ${errorPasswordIsReqiured}
+     page should contain    ${expectedTextPasswordIsRequired}
+
+invalidLoginPasswordLengthMax
+     click link      ${sign-in}
+     wait until element is visible    ${loginPageHeader}
+     input text    ${emailAddressField}     ${emailaddress}
+     input text    ${passwordField}    ${passwordlengthmax}
+     click button   ${loginpageLoginButton}
+     wait until element is visible    ${errorPasswordLengthIsInvalid}
+     page should contain    ${expectedTextPasswordLengthIsInvalid}

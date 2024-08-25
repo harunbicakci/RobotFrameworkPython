@@ -8,6 +8,7 @@ ${sign-in}      xpath=//a[@data-test='nav-sign-in']
 ${loginPageHeader}  xpath=/html/body/app-root/div/app-login/div/div/div/h3
 ${registerYourAccountButton}    xpath=//a[@data-test='register-link']
 ${loginpageLoginButton}    xpath=/html/body/app-root/div/app-login/div/div/div/form/div[3]/input
+${myAccountTitle}   xpath=//h1[@data-test='page-title']
 
 ${emailAddressField}    id=email
 ${passwordField}       xpath://input[@id='password']

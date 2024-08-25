@@ -12,7 +12,6 @@ click on register your account link
 user login with valid credentials
     input text    ${emailAddressField}  ${emailAddress}
     input text    ${passwordField}    ${password}
-    sleep    2s
     click element    ${loginpageLoginButton}
     sleep    2s
 
@@ -22,9 +21,10 @@ loginToApplication
     input text    ${emailAddressField}      ${emailAddress}
     input text    ${passwordField}    ${password}
     click button   ${loginpageLoginButton}
-    wait until element is visible    xpath://div[@class='help-block']
-    get text    xpath://div[@class='help-block']
-    page should contain    ${invalidEmailOrPasswordErrorExpectedText}
+    wait until element is visible    ${myAccountTitle}
+    ${actualText} =     Get Text     ${myAccountTitle}
+    should be equal    ${actualText}  My account
+    log to console    ${actualText}
 
 invalidLoginEmptyEmail
      click link      ${sign-in}

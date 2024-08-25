@@ -11,11 +11,6 @@ Test Teardown   utils.close session
 *** Variables ***
 
 *** Test Cases ***
-Login Test
-    [Tags]   Smoke
-    loginPageApp.loginToApplication
-    title should be    Login - Practice Software Testing - Toolshop - v5.0
-    sleep   1s
 
 Invalid Login Empty Email
     [Tags]    regression

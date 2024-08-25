@@ -6,7 +6,7 @@ Library     DebugLibrary
 ${myAccount}    My account
 ${firstProductimage}    xpath=//img[@class='card-img-top']
 
-${emailAddress}     davidbackham9114@gmail.com
+${emailAddress}     davidbackham9116@gmail.com
 ${password}         United@123?
 ${emailEmpty}
 ${passwordEmpty}

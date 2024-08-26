@@ -2,6 +2,7 @@
 Resource    ../Resources/loginPageApp.robot
 Resource    ../Resources/homePageApp.robot
 Resource    ../Resources/registrationPageApp.robot
+Resource    ../Resources/profilePageApp.robot
 Library    SeleniumLibrary
 Library    DebugLibrary
 
@@ -22,11 +23,16 @@ create new user
     utils.validate user logged in
 
 Login Test
-    [Tags]   smoke
+    [Tags]   smoke1
     loginPageApp.loginToApplication
     title should be    Overview - Practice Software Testing - Toolshop - v5.0
     sleep   1s
-    debug
+
+Purchase Test
+    [Tags]    e2e
+    loginToApplication
+    profilePageApp.purchase 2 random items
+    cart validation
 
 
 #    create new E2E page and PageApp and test the count of the tools one by one

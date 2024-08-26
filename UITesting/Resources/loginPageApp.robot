@@ -3,6 +3,7 @@ Resource    PageObject/loginPage.robot
 Library    SeleniumLibrary
 
 *** Keywords ***
+
 wait until login page loads
     Wait Until Element Contains   ${loginPageHeader}  Login
 

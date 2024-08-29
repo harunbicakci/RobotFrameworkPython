@@ -33,7 +33,7 @@ Purchase Test
     loginToApplication
     profilePageApp.purchase 2 random items
     cart validation
-
+#     debug
 
 #    create new E2E page and PageApp and test the count of the tools one by one
 # -->this is for after successful login getting the products count for powertools
